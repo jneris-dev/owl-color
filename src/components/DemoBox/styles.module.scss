@@ -1,0 +1,52 @@
+.container {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 10vw 5vw;
+    
+    @media (min-width: 1130px) {
+        flex: 0 0 auto;
+        width: 60%;
+    }
+
+    @media (max-width: 1130px) and (min-width: 480px) {
+        padding: 5rem 10vw 5rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 2.5rem 5vw 5rem;
+    }
+
+    .demoContent {
+        padding-top: 3rem;
+
+        .lineThrough {
+            text-decoration: line-through;
+        }
+
+        h5 {
+            font-size: 1.953rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .buttonsWrap {
+            margin-top: 1rem;
+            gap: 1rem;
+            display: inline-flex;
+
+            button {
+                padding: .75rem 1rem;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: .25rem;
+
+                svg {
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
+}

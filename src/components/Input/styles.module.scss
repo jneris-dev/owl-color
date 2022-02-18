@@ -1,0 +1,50 @@
+.wrapper {
+    border: 0.15rem solid rgba(255, 255, 255, 0.25);
+    border-radius: 0.5em;
+    padding: 0 0.5rem;
+    position: relative;
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    input {
+        height: 3.5rem;
+        background-color: transparent;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        padding: 0 1rem;
+        flex-basis: 18rem;
+        flex-grow: 1;
+    }
+
+    button {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.25em;
+        border: none;
+        background-color: #222228;
+        color: #ffffff;
+        transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .pickerWrapper {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 100;
+
+        .picker {
+            width: 100%;
+            height: 15rem;
+            border: 0.15rem solid rgba(255, 255, 255, 0.25);
+            border-top: none;
+
+            > div {
+                border-radius: 0;
+            }
+        }
+    }
+}
