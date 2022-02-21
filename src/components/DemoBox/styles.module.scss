@@ -51,6 +51,14 @@
             gap: 1rem;
             display: inline-flex;
 
+            @media (max-width: 320px) {
+                display: grid;
+
+                a button {
+                    width: 100%;
+                }
+            }
+
             button {
                 padding: .75rem 1rem;
                 border-width: 1px;

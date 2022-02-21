@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdSwapHoriz } from 'react-icons/md';
+import { MdSwapVert } from 'react-icons/md';
 import tinycolor from 'tinycolor2';
 
 import styles from './styles.module.scss';
@@ -32,7 +32,7 @@ export function SwapButton({ colorText, setColorText, colorBackground, setColorB
             className={styles.swapButton}
             onClick={copyColor}
         >
-            <MdSwapHoriz />
+            <MdSwapVert />
         </button>
     );
 }
