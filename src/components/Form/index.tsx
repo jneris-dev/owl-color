@@ -75,7 +75,7 @@ export function Form() {
                         href="https://jneris.com.br/"
                         title="JNeris - Frontend Developer and Web Designer"
                         target="_blank"
-                        rel="noopener"
+                        rel="noreferrer"
                     >
                         João Neris
                     </a>
