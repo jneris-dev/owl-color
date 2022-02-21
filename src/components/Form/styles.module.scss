@@ -22,8 +22,19 @@
         margin-bottom: 3rem;
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: .5rem;
+            display: inline-block;
+            color: #f2ebd9;
+
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+
+            span {
+                color: #f2484b;
+            }
         }
 
         p {
@@ -38,9 +49,5 @@
             display: block;
             font-weight: bold;
         }
-    }
-
-    .textColorWrap {
-        margin-bottom: 4rem;
     }
 }

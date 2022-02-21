@@ -20,12 +20,20 @@ export function DemoBox() {
         <section className={styles.container} style={{ backgroundColor: backgroundColor }}>
             <ContrastResult contrast={contrast} />
             <div style={{ color: foregroundColor }} className={styles.demoContent}>
-                <h5 className={`${contrast < 4.5 && styles.lineThrough}`}>This is a large text for demo</h5>
-                <p className={`${contrast < 7 && styles.lineThrough}`}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veritatis quam similique, libero quas tempora voluptates! Impedit veritatis placeat possimus harum dicta quis tenetur vel maiores ad consectetur facilis, fugiat labore laudantium accusantium nisi est sit sequi. Doloremque provident maxime, ex ipsa dolores incidunt, architecto reprehenderit temporibus iste labore eaque!
-                </p>
+                <div className={`${styles.largeContent} ${contrast < 4.5 && styles.lineThrough}`}>
+                    <strong>Large Text - 24px/18pt</strong>
+                    <p>
+                        Contrast ratio is a measure of the difference in perceived brightness between two colors. The higher the ratio, the better the contrast.
+                    </p>
+                </div>
+                <div className={`${styles.normalContent} ${contrast < 7 && styles.lineThrough}`}>
+                    <strong>Normal Text - 16px</strong>
+                    <p>
+                        According to Web Content Accessibility Guidelines (WCAG) 2.0, text and images of text should have a minimum contrast ratio of 4.5:1 (Level AA), while large text should have minimum contrast ratio of 3:1. For enhanced contrast (Level AAA), normal text and large text should have minimum contrast ratio of 7:1 and 4.5:1 respectively.
+                    </p>
+                </div>
                 <div className={styles.buttonsWrap}>
-                    <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="noopener" target="_blank" title="WCAG 2.0">
+                    <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="noreferrer" target="_blank" title="WCAG 2.0">
                         <button
                             style={{
                                 backgroundColor: backgroundColor,
@@ -35,7 +43,7 @@ export function DemoBox() {
                             <MdOpenInNew size={20} /> WCAG 2.0
                         </button>
                     </a>
-                    <a href="https://webaim.org/articles/contrast/" rel="noopener" target="_blank" title="WebAIM article">
+                    <a href="https://webaim.org/articles/contrast/" rel="noreferrer" target="_blank" title="WebAIM article">
                         <button
                             style={{
                                 backgroundColor: backgroundColor,
