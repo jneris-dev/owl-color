@@ -16,7 +16,9 @@ export function Form() {
         backgroundColor,
         showBackgroundColorPicker,
         setBackgroundColor,
-        ssetSowBackgroundColorPicker
+        setShowBackgroundColorPicker,
+
+        setToast
     } = useColor();
 
     return (
@@ -36,6 +38,7 @@ export function Form() {
                         toggle={setShowForegroundColorPicker}
                         color={foregroundColor}
                         setColor={setForegroundColor}
+                        toast={setToast}
                     />
                 </div>
                 <SwapButton
@@ -48,9 +51,10 @@ export function Form() {
                     <label>Background Color</label>
                     <Input
                         show={showBackgroundColorPicker}
-                        toggle={ssetSowBackgroundColorPicker}
+                        toggle={setShowBackgroundColorPicker}
                         color={backgroundColor}
                         setColor={setBackgroundColor}
+                        toast={setToast}
                     />
                 </div>
             </div>

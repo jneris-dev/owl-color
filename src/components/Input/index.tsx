@@ -5,16 +5,22 @@ import { HexColorPicker } from 'react-colorful';
 import { useClickAway, useCopyToClipboard } from 'react-use';
 import { MdColorize } from "react-icons/md";
 
+type Toast = {
+    show: boolean,
+    message: string,
+}
+
 type ColorInterface = {
     show: boolean;
     color: string;
     toggle: (value: boolean) => void;
     setColor: (e: string) => void;
+    toast: ({ show, message }: Toast) => void;
 }
 
 import styles from './styles.module.scss';
 
-export function Input({ show, toggle, color, setColor, ...props }: ColorInterface) {
+export function Input({ show, toggle, color, setColor, toast, ...props }: ColorInterface) {
     const picker = useRef(null);
     const inputOuter = useRef<HTMLDivElement>(null);
 
@@ -71,6 +77,10 @@ export function Input({ show, toggle, color, setColor, ...props }: ColorInterfac
             <button
                 onClick={(e) => {
                     copyToClipboard(color);
+                    toast({
+                        show: true,
+                        message: `Successfully copied "${color}" to clipboard`,
+                    });
                 }}
                 className={styles.copy}
             >

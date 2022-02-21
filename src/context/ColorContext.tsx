@@ -2,6 +2,11 @@ import { createContext, ReactNode, useEffect, useState } from "react";
 import { useToggle, useFavicon } from "react-use";
 import tinycolor from "tinycolor2";
 
+type Toast = {
+    show: boolean,
+    message: string,
+}
+
 type ColorContextType = {
     foregroundColor: string;
     backgroundColor: string;
@@ -11,10 +16,13 @@ type ColorContextType = {
     showForegroundColorPicker: boolean;
     showBackgroundColorPicker: boolean;
 
+    toast: Toast;
+
     setForegroundColor: (value: string) => void;
     setBackgroundColor: (value: string) => void;
     setShowForegroundColorPicker: (value: boolean) => void;
-    ssetSowBackgroundColorPicker: (value: boolean) => void;
+    setShowBackgroundColorPicker: (value: boolean) => void;
+    setToast: ({ show, message }: Toast) => void;
 }
 
 type ColorContextProviderProps = {
@@ -33,7 +41,12 @@ export function ColorContextProvider(props: ColorContextProviderProps) {
     );
 
     const [showForegroundColorPicker, setShowForegroundColorPicker] = useToggle(false);
-    const [showBackgroundColorPicker, ssetSowBackgroundColorPicker] = useToggle(false);
+    const [showBackgroundColorPicker, setShowBackgroundColorPicker] = useToggle(false);
+
+    const [toast, setToast] = useState({
+        show: false,
+        message: "",
+    });
 
     const colorIcon = tinycolor(foregroundColor);
 
@@ -57,7 +70,9 @@ export function ColorContextProvider(props: ColorContextProviderProps) {
             setForegroundColor,
             setBackgroundColor,
             setShowForegroundColorPicker,
-            ssetSowBackgroundColorPicker
+            setShowBackgroundColorPicker,
+            toast,
+            setToast
         }}>
             {props.children}
         </ColorContext.Provider>
