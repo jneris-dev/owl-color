@@ -1,7 +1,9 @@
 import React from 'react';
 import { MdCheck, MdClose } from 'react-icons/md';
 
-import { RatingInterface } from '../../interface/useInterface';
+interface RatingInterface {
+    pass: boolean;
+}
 
 import styles from './styles.module.scss';
 
