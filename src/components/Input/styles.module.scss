@@ -9,6 +9,14 @@
     align-items: center;
     margin-bottom: 1rem;
 
+    span {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        width: auto;
+        padding: 0 0.5rem;
+    }
+
     input {
         height: 3.5rem;
         background-color: transparent;
@@ -17,6 +25,7 @@
         outline: none;
         padding: 0 1rem;
         flex-grow: 1;
+        margin: 0;
     }
 
     button {

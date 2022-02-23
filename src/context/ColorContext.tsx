@@ -7,6 +7,12 @@ type Toast = {
     message: string,
 }
 
+type Format = {
+    id: number,
+    name: string,
+    unavailable: boolean,
+}
+
 type ColorContextType = {
     foregroundColor: string;
     backgroundColor: string;
@@ -16,6 +22,9 @@ type ColorContextType = {
     showForegroundColorPicker: boolean;
     showBackgroundColorPicker: boolean;
 
+    backgroundColorFormat: Format;
+    foregroundColorFormat: Format;
+
     toast: Toast;
 
     setForegroundColor: (value: string) => void;
@@ -23,7 +32,18 @@ type ColorContextType = {
     setShowForegroundColorPicker: (value: boolean) => void;
     setShowBackgroundColorPicker: (value: boolean) => void;
     setToast: ({ show, message }: Toast) => void;
+
+    setBackgroundColorFormat: ({ id, name, unavailable }: Format) => void;
+    setForegroundColorFormat: ({ id, name, unavailable }: Format) => void;
 }
+
+const formats = [
+    { id: 1, name: "hex", unavailable: false },
+    { id: 2, name: "rgb", unavailable: false },
+    { id: 3, name: "hsl", unavailable: false },
+    { id: 4, name: "hsv", unavailable: false },
+    { id: 5, name: "name", unavailable: false },
+];
 
 type ColorContextProviderProps = {
     children: ReactNode
@@ -42,6 +62,13 @@ export function ColorContextProvider(props: ColorContextProviderProps) {
 
     const [showForegroundColorPicker, setShowForegroundColorPicker] = useToggle(false);
     const [showBackgroundColorPicker, setShowBackgroundColorPicker] = useToggle(false);
+
+    const [backgroundColorFormat, setBackgroundColorFormat] = useState(
+        formats[0]
+    );
+    const [foregroundColorFormat, setForegroundColorFormat] = useState(
+        formats[0]
+    );
 
     const [toast, setToast] = useState({
         show: false,
@@ -72,7 +99,11 @@ export function ColorContextProvider(props: ColorContextProviderProps) {
             setShowForegroundColorPicker,
             setShowBackgroundColorPicker,
             toast,
-            setToast
+            setToast,
+            backgroundColorFormat,
+            foregroundColorFormat,
+            setBackgroundColorFormat,
+            setForegroundColorFormat
         }}>
             {props.children}
         </ColorContext.Provider>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import GithubCorner from 'react-github-corner';
 
@@ -10,18 +10,25 @@ import styles from './styles.module.scss';
 
 export function Form() {
     const {
-        foregroundColor,
-        showForegroundColorPicker,
-        setForegroundColor,
-        setShowForegroundColorPicker,
-
         backgroundColor,
         showBackgroundColorPicker,
         setBackgroundColor,
         setShowBackgroundColorPicker,
+        backgroundColorFormat,
+        setBackgroundColorFormat,
+
+        foregroundColor,
+        showForegroundColorPicker,
+        setForegroundColor,
+        setShowForegroundColorPicker,
+        foregroundColorFormat,
+        setForegroundColorFormat,
 
         setToast
     } = useColor();
+
+    const backgroundColorInput = useRef<HTMLInputElement | null>(null);
+    const foregroundColorInput = useRef<HTMLInputElement | null>(null);
 
     return (
         <section className={styles.container}>
@@ -49,6 +56,11 @@ export function Form() {
                         color={backgroundColor}
                         setColor={setBackgroundColor}
                         toast={setToast}
+                        id={`backgroundColor`}
+                        title={`Background Color`}
+                        reference={backgroundColorInput}
+                        colorFormat={backgroundColorFormat}
+                        setColorFormat={setBackgroundColorFormat}
                     />
                 </div>
                 <SwapButton
@@ -56,6 +68,10 @@ export function Form() {
                     setColorText={setForegroundColor}
                     colorBackground={backgroundColor}
                     setColorBackground={setBackgroundColor}
+                    backgroundFormat={backgroundColorFormat}
+                    setBackgroundFormat={setBackgroundColorFormat}
+                    textFormat={foregroundColorFormat}
+                    setTextFormat={setForegroundColorFormat}
                 />
                 <div className={styles.textColorWrap}>
                     <label>Foreground</label>
@@ -65,6 +81,11 @@ export function Form() {
                         color={foregroundColor}
                         setColor={setForegroundColor}
                         toast={setToast}
+                        id={`foregroundColor`}
+                        title={`Foreground Color`}
+                        reference={foregroundColorInput}
+                        colorFormat={foregroundColorFormat}
+                        setColorFormat={setForegroundColorFormat}
                     />
                 </div>
             </div>

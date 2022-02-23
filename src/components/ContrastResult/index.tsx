@@ -1,11 +1,9 @@
 import React from 'react';
 import { Rating } from '../Rating';
 
-import styles from './styles.module.scss';
+import { ContrastInterface } from '../../interface/useInterface';
 
-type ContrastInterface = {
-    contrast: number;
-}
+import styles from './styles.module.scss';
 
 export function ContrastResult({ contrast, ...props }: ContrastInterface) {
 

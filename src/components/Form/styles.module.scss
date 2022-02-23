@@ -16,7 +16,7 @@
         padding: 2.5rem 10vw 3rem;
     }
 
-    @media (max-width: 320px) {
+    @media (max-width: 360px) {
         padding: 3.5rem 5vw 1rem;
     }
 
@@ -58,7 +58,7 @@
         }
 
         .textColorWrap, .backgroundColorWrap {
-            label {
+            > label {
                 font-size: 1rem;
                 margin-bottom: .8rem;
                 display: block;
@@ -80,7 +80,7 @@
             
             a {
                 position: relative;
-                margin-left: .5rem;
+                margin-left: .4rem;
                 text-decoration: none;
                 color: #f2484b;
             }

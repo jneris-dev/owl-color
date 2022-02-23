@@ -7,7 +7,7 @@ import styles from './styles.module.scss'
 export function Toast() {
     const { toast, setToast } = useColor();
 
-    const ms = 5000;
+    const ms = 8000;
 
     const timeout = setTimeout(() => {
         setToast({

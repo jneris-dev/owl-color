@@ -23,6 +23,14 @@
             text-decoration: line-through;
         }
 
+        .iconsContainer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: .8rem;
+            margin-bottom: 2rem;
+        }
+
         .largeContent {
             margin-bottom: 1rem;
             font-size: 24px;
@@ -51,7 +59,7 @@
             gap: 1rem;
             display: inline-flex;
 
-            @media (max-width: 320px) {
+            @media (max-width: 360px) {
                 display: grid;
 
                 a button {
@@ -64,6 +72,7 @@
                 border-width: 1px;
                 border-style: solid;
                 border-radius: .25rem;
+                background-color: transparent;
 
                 svg {
                     vertical-align: bottom;

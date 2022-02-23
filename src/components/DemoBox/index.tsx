@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import tinycolor from 'tinycolor2';
 import { useColor } from '../../hook/useColor';
 import { MdOpenInNew } from 'react-icons/md';
+import { BsCircle, BsSquare, BsTriangle } from 'react-icons/bs';
 
 import { ContrastResult } from '../ContrastResult';
 
@@ -20,6 +21,11 @@ export function DemoBox() {
         <section className={styles.container} style={{ backgroundColor: backgroundColor }}>
             <ContrastResult contrast={contrast} />
             <div style={{ color: foregroundColor }} className={styles.demoContent}>
+                <div className={styles.iconsContainer}>
+                    <BsCircle size={27} />
+                    <BsTriangle size={28} />
+                    <BsSquare size={27} />
+                </div>
                 <div className={`${styles.largeContent} ${contrast < 4.5 && styles.lineThrough}`}>
                     <strong>Large Text - 24px/18pt</strong>
                     <p>
