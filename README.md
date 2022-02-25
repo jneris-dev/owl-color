@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <img alt="Owl Color" src=".github/logo.svg" width="250px">
+</p>
 
-## Getting Started
+<p align="center">
+    <img alt="Owl Color" title="Owl Color" src=".github/cover.svg" />
+</p>
 
-First, run the development server:
+## 🧪 Technologies
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This project was developed using the following technologies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [React](https://reactjs.org)
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [SCSS](https://sass-lang.com/)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 📚 Libs
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Main libraries used in the application:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [react-colorful](https://omgovich.github.io/react-colorful/)
+- [react-github-corner](https://github.com/skratchdot/react-github-corner)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [tinycolor2](https://github.com/bgrins/TinyColor)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
+## 🔥 Preview
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[<img alt="Owl Color" title="Owl Color" src=".github/deploy.svg" />](https://https://owl-color.vercel.app/)
+
+## 🚀 Getting started
+
+Clone the project and access the folder.
+
+```bash
+$ git clone https://github.com/jneris-dev/owl-color.git
+$ cd owl-color
+```
+
+Follow the steps below:
+```bash
+# Install the dependencies
+$ yarn
+
+# Start the project
+$ yarn dev
+```
+The app will be available for access on your browser at http://localhost:3000
+
+## 💻 Project
+
+[Owl Color](https://owl-color.vercel.app/) it's a simple web tool built using react that allows you to check color contrast ratio between any two valid color. 🎨
+
+## 📝 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
+
+
+---
+
+<p align="center">Made with 🖤 by João Neris</p>
